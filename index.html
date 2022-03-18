@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+  <body>
+    <div class="number">0</div>
+    <button id="tombol">+</button>
+    <script>
+    let angka = 0;
+    document.getElementById("tombol").addEventListener("click", function (){
+      angka += 1;
+      document.querySelector(".number").innerHTML = angka;
+      if (angka %5 === 0) {
+        document.querySelector(".number").style.animationName = "bounce";
+        document.querySelector(".number").style.animationDuration ="3s";
+      } else {
+        document.querySelector(".number").style.animation= "none";
+      }
+    });
+    </script>
+  </body>
+</html>
